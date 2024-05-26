@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: black;
+    border: 2px solid red;
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+.logo1{
+    display: flex;
+    align-items: center;
+}
+#img1{
+    width: 8vw;
+    height: 17vh;
+    object-fit: cover;
+  }
+.logo2{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+#img2{
+    width: 8vw;
+    height: 17vh;
+    object-fit: cover;
+    animation: rotate 5s infinite linear;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+nav{
+    display: flex;
+    height: 17vh;
+}
+nav ul{
+    height: 17vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+    padding: 0 1.7vw;
+}
+nav ul li a{
+    color: antiquewhite;
+    text-decoration: none;
+}
+.search{
+    height: 16vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.search input{
+    margin: 10px;
+    border: 2px solid red;
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+.btn{
+    margin: 5px;
+    width: 4vw;
+    border: 2px solid red;
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    cursor: pointer;/*Arrow changes to hand Sign*/
+}
+.con{
+    display: flex;
+    flex-direction: row;
+    min-height: calc(100vh - 12vh - 23vh);/*Remember to put spaces*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: changeBg 12s infinite;
+    background-color: brown;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+@keyframes changeBg {
+    0% {
+      background-image: url(Images/mortal1.jpg);
+    }
+    25% {
+      background-image: url(Images/mortal2.jpg);
+    }
+    50% {
+      background-image: url(Images/mortal3.jpg);
+    }
+    75% {
+      background-image: url(Images/mortal4.jpg);
+    }
+    100% {
+      background-image: url(Images/mortal1.jpg);
+    }
+  }
+#h21{
+    position: absolute;
+    left: 4vw;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+.tb{
+    position: absolute;
+    left: 3.65vw;
+    top: 23vh;
+}
+.playerb{
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+.B1{
+    max-height: 30vh;
+    max-width: 10vw;
+    height: auto;
+    border-radius: 4px;
+}
+#h22{
+    position: absolute;
+    right: 5vw;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+.tr{
+    position: absolute;
+    right: 3.80vw;
+    top: 24vh;
+}
+.playerr{
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+.R1{
+    max-height: 30vh;
+    max-width: 10vw;
+    height: auto;
+    border-radius: 4px;
+}
+.text1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    height: 12vh;
+    background-color: black;
+    border: 2px solid red;
+    color: antiquewhite;
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}

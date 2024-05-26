@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targeting Elements</title>
+    <style>
+         body{background-color: aqua;}
+        h1{
+            color: beige;
+            /* To change the colur of text */
+        }
+        h2{
+            color: antiquewhite;
+            background-color: black;
+        }
+        h3,h4,h5{background-color: blue;}
+        span,ul,nav,main,select,selection{background-color: blueviolet;}
+
+        #first{background-color: red;}
+        .second{background-color: brown;}
+        /* This is will Not Work Because id is targeted by # */
+
+        .red{background-color: chartreuse;}
+        /* # is used to Target ID . is used to Target Class */
+    </style>
+</head>
+<body>
+        <!-- A ELement can have mutiple class But it's Id will Be always Unique
+        These Elements can be targeted By tags, id, class -->
+
+    <h1> This is My Main Heading of H1</h1>
+    <h2>This is H2</h2>
+    <h3>This is H3</h3>
+    <h4>This is H4</h4>
+    <h5>This is H5</h5>
+
+    <span>This is Span</span>
+    <ul>This is UL</ul>
+    <nav>This is NAV</nav>
+    <main>This is main</main>
+    <select name="" id="first">This is select</select>
+    <!-- This select has id first same as div, #first is red so it shows red -->
+    <select name="" id="">This is select</select>
+    <section class="red">This is Section</section>
+    <!-- The section element should have a background-color of blueviolet. However, the selection element has a class of red assigned to it. In CSS, class red should have a background-color of chartreuse. So the Command is Overwritten -->
+
+    <div id="first">This is id First</div>
+    <div id="second">This is id Second</div>
+
+    <div class="red">This has Class Red</div>
+    <div class="red">This Division has also Class Red</div>
+</body>
+</html>

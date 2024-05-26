@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .list1{
+            display: inline;
+        }
+        .list2{
+            width: 200px;
+            list-style-type: square; /*Design of Bulletens*/
+            list-style-position: inside;
+        }
+        .list3{
+            width: 200px;
+            list-style-type: circle; /*Design of Bulletens*/
+            list-style-position: outside;
+        }
+        .list4{
+            list-style-image: url(Images/logo.png);
+            list-style-position: inside;        
+        }
+        header{
+            background-color: black;
+            color: antiquewhite;
+            height: 70px;
+            position: relative;
+            z-index: 5;
+            /*The More the Z index Value It Will Remain Top Over Other Elements While Scrooling
+            In Other Words It Defines the stack Order*/
+        }
+        .con{
+            background-color: aqua;
+            height: 50vh;
+            width: 50vw;
+            margin: auto;
+            position: static;
+            /*Static: It is a Default Position. Top/Bottom/Left/Right/Z-Index has no effect*/
+        }
+        p{
+            text-align: center;
+            height: 3000px;
+            border: 4px solid black;
+            position: relative;
+        }
+        .box1{
+            background-color: blue;
+            height: 200px;
+            width: 200px;
+            position: relative;
+            /*Relative:The top/bottom/left/right/Z-Index will now Work.Otherwise the elements is in the flow of document like static*/
+        }
+        .box2{
+            background-color: blueviolet;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            /*Absolute: The Element is removed from the flow & is relatively positioned to its first non-static ancestor.Top/Bottom etc Works*/
+        }
+        .box3{
+            background-color: brown;
+            top: 10px;
+            right: 10px;
+            height: 200px;
+            width: 200px;
+            position: fixed;
+            /*Fixed: Just Like Absolute except the element is positioned relative to the browser window*/
+        }
+        .box4{
+            background-color: cadetblue;
+            bottom: 80px;
+            left: 10px;
+            height: 200px;
+            width: 200px;
+            position: sticky;
+            /*Sticky: The Element is positioned based on user Scroll Position*/
+
+            /* z-index: -10; */
+            /*Uncomment above line it Display box will slide below the paragraph*/
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="list1"> 
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </nav>
+    </header>
+    <div class="con">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, unde aspernatur? Aliquam itaque nisi quas repellat. Aspernatur adipisci enim, nulla rem odit, tempore quod quos sed asperiores fugit veniam atque facilis hic consectetur repellendus doloribus. Odit dolorum accusantium in porro?</p>
+
+        <div class="box1">I am BOX 1</div>
+        
+        <div class="box2">I am BOX 2</div>
+
+        <div class="box3">I am BOX 3</div>
+
+        <div class="box4">I am BOX 4</div>
+    </div>
+    <ol class="list2">
+        <li>Apollo 11: First Human Landing</li>
+        <li>City in Space: The International Space Station</li>
+        <li>Great Observatory: The Hubble Space Telescope</li>
+        <li>Everlasting Mars Rovers</li>
+    </ol>
+
+    <ul class="list3">
+        <li>Apollo 11: First Human Landing</li>
+        <li>City in Space: The International Space Station</li>
+        <li>Great Observatory: The Hubble Space Telescope</li>
+        <li>Everlasting Mars Rovers</li>
+    </ul>
+
+    <ul class="list4">Position Avalable
+        <li>Web Developer</li>
+        <li>Senior Full Stack Developer</li>
+        <li>Team Lead</li>
+        <li>Team Head</li>
+        <li>CEO</li>
+        <li>Director</li>
+    </ul>
+</body>
+</html>

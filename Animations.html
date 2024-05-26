@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <Style>
+        .con{
+            height: 97vh;
+            width: 214vh;
+            background-color: aqua;
+            display: flex;
+            flex-direction: row;
+        }
+        .box{
+            width: 30vh;
+            height: 30vh;
+            background-color: blue;
+            color: antiquewhite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation-name: ani1;
+            animation-duration: 4s;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-delay: 2s;
+            animation-iteration-count: 3;
+            animation-direction: alternate-reverse;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+        }
+        .pox{
+            width: 30vh;
+            height: 30vh;
+            background-color:red;
+            color: antiquewhite;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            animation-name: ani1;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 2s;
+            animation-iteration-count: 3;
+            animation-direction: reverse;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+        }
+        .nox{
+            width: 30vh;
+            height: 30vh;
+            background-color: blueviolet;
+            color: antiquewhite;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            animation-name: ani1;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 2s;
+            animation-iteration-count: 3;
+            animation-direction: reverse;
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+        }
+        .rox{
+            width: 30vh;
+            height: 30vh;
+            background-color: gold;
+            color: black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            animation-name: ani2;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 2s;
+            animation-iteration-count: 3;
+            animation-direction: reverse;
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
+        @keyframes ani1{
+            from{
+                width: 40vw;
+                height: 30vw;
+            }
+            to {
+                height: 97vh;
+                width: 214vh;
+            }
+        }
+        @keyframes ani2{
+            0%{
+                width: 214vw;
+                height: 5vw;
+            }
+            50% {
+                height: 50vh;
+                width: 50vh;
+            }
+            100%{
+                height: 97vh;
+                width: 5vh;
+            }
+        }
+    </Style>
+</head>
+<body>
+    <div class="con">
+        <div class="box">
+            This is BOX
+        </div>
+        <div class="pox">
+            This is POX
+        </div>
+        <div class="nox">
+            This is NOX
+        </div>
+        <div class="rox">
+            This is ROX
+        </div>
+    </div>
+</body>
+</html>

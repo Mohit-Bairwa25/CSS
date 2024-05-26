@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        img{ /*Targeting All Images*/
+            height: 90vh;
+            width: 90vw;
+        }
+        #myImage1:hover{
+            height: 40vh;
+            width: 40vw;
+            transition: 8s; /*Time took in transition*/
+        }
+        #myImage2:hover{
+            width: 40vw;
+            transition: 3s;
+            transition-timing-function: ease-in;
+            /*Transition will start slowly and gradually accelerate over time until it reaches its final state.*/
+        }
+        #myImage3:hover{
+            width: 40vw;
+            transition: 3s;
+            transition-timing-function: steps(6, end);
+        }
+        #myImage4:hover{
+            width: 40vw;
+            transition: 3s;
+            transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);
+            /*cubic-bezier(X1, Y1, X2, Y2) Refer MDN Reference*/
+        }
+        #myImage6:hover{
+            width: 40vw;
+            height: 30vh;
+            transition: width 10s ease-in-out, height 3s ease-out;
+            /*Setting Multiple Properties Together*/
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <img id="myImage1" src="Images/Background.jpg">
+        <img id="myImage2" src="Images/Background.jpg">
+        <img id="myImage3" src="Images/Background1.jpg">
+        <img id="myImage4" src="Images/Background1.jpg">
+        <img id="myImage5" src="Images/Hashirama.jpg">
+        <button id="btn">Toogle</button>
+        <img id="myImage6" src="Images/Hashirama.jpg">
+        <div class="item1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item7">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item9">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+    </div>
+</body>
+<script>
+    const btn = document.getElementById('btn');
+    const myImage5 = document.getElementById('myImage5');
+    let isImageWidthSet = false;
+  
+    function toggleImageWidth() {
+      if (!isImageWidthSet) {
+        myImage5.style.width = '10vw';
+        isImageWidthSet = true;
+      } else {
+        myImage5.style.width = '';
+        isImageWidthSet = false;
+      }
+    }
+  
+    btn.addEventListener("click", toggleImageWidth);
+  </script>
+</html>

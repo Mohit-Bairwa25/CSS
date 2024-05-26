@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing</title>
+    <style>
+        body {
+            display: flex; /* To control the positioning, alignment, and sizing of elements within a container*/
+            flex-direction: row;
+        }
+        /*Determines what out of padding and border is included in elements width and height
+        Can be content or border box*/
+        .box1{
+            background-color: red;
+            margin: 30px;
+            padding: 20px;
+            width: 300px;
+            border: 2px solid black;
+        }
+        .box2{
+            background-color: aqua;
+            height: 200px;
+            padding: 30px;
+            width: 100%;
+            border: 2px solid grey;
+            box-sizing: content-box;/* If you set an element's width to 100 pixels, then the element's content box will be 100 pixels wide, and the width of any border or padding will be added to the final rendered width, making the element wider than 100px.*/
+        }
+        .box3{
+            background-color: red;
+            margin: 30px;
+            padding: 20px;
+            width: 300px;
+            border: 2px solid black;
+        }
+        .box4{
+            background-color: aqua;
+            height: 200px;
+            padding: 30px;
+            width: 100%;
+            border: 2px solid grey;
+            box-sizing: border-box;/* Account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width.*/
+        }
+        .box5{
+            background-color: red;
+            margin: 30px;
+            width: 300px;
+            border: 2px solid black;
+        }
+        .box6{
+            background-color: aqua;
+            height: 200px;
+            width: 100%;
+            border: 2px solid grey;
+        }
+    </style>
+</head>
+<body>
+        <div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque explicabo eos quia impedit vero officiis eligendi obcaecati voluptatem incidunt consectetur! Reiciendis error odio quaerat consectetur accusamus adipisci, assumenda repudiandae distinctio sunt dolores et hic fugiat magni accusantium libero voluptates. Asperiores esse a laudantium facere. Distinctio expedita laboriosam dolores qui officiis excepturi dolorum aliquid debitis, non, illo in impedit quos cumque, accusamus soluta omnis ipsa. Nam neque magnam nihil provident, hic, libero rem dolor enim impedit fugit velit minus tempora dolores incidunt quos possimus sunt? Quasi inventore natus ullam, fugiat saepe ipsa vel doloribus, maxime, consectetur sunt repellat iste dicta repudiandae quibusdam iure nobis a quis. Nulla error in, consequuntur at, excepturi asperiores velit eligendi labore pariatur recusandae, dicta natus! Sequi cupiditate nostrum porro amet! Eos laudantium hic vitae deleniti perferendis inventore molestiae vel repellendus obcaecati cum repudiandae eligendi facilis, at earum officia excepturi praesentium iure. Laborum praesentium fugiat tenetur quasi ab cumque dolores? Quis explicabo atque sed minus saepe laudantium est magnam facere sunt aliquid ab suscipit voluptatem dolorum, qui voluptatum amet libero illo illum. Eaque molestias cumque quidem adipisci ea hic enim, ipsum libero! Porro beatae cumque voluptatibus, facere saepe consectetur aut alias quidem ullam veritatis culpa ratione explicabo fugit dolorum, nesciunt sunt pariatur totam soluta. Ullam quae, ad aspernatur repellat pariatur fugit. Eligendi deleniti, vero doloribus rerum nesciunt harum nobis officiis autem sapiente neque, in esse dolor! Illum optio fugiat sapiente esse assumenda, dolorem deleniti quidem exercitationem beatae veniam alias officiis, soluta earum, officia atque repellendus eligendi et accusamus sit nulla dolores animi blanditiis iste! Vitae debitis dolorum excepturi laborum suscipit enim beatae, ipsa animi fugiat id ut incidunt libero rem voluptates aspernatur voluptatem eveniet sit nobis impedit similique minus. Aut maiores temporibus blanditiis pariatur amet numquam, ea minus dignissimos quidem, itaque ullam quos quis quia. Id, ratione?
+
+        <div class="box2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui sequi quia quisquam repudiandae officia distinctio inventore architecto. Ratione beatae recusandae eligendi autem labore modi, alias asperiores provident voluptas architecto nobis, id cupiditate. Repudiandae ab quibusdam similique nobis nulla odio vero libero asperiores! Accusantium, non quam aliquam necessitatibus optio sed dolorem aliquid aspernatur inventore corrupti.</div>
+        </div>
+
+        <div class="box3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque explicabo eos quia impedit vero officiis eligendi obcaecati voluptatem incidunt consectetur! Reiciendis error odio quaerat consectetur accusamus adipisci, assumenda repudiandae distinctio sunt dolores et hic fugiat magni accusantium libero voluptates. Asperiores esse a laudantium facere. Distinctio expedita laboriosam dolores qui officiis excepturi dolorum aliquid debitis, non, illo in impedit quos cumque, accusamus soluta omnis ipsa. Nam neque magnam nihil provident, hic, libero rem dolor enim impedit fugit velit minus tempora dolores incidunt quos possimus sunt? Quasi inventore natus ullam, fugiat saepe ipsa vel doloribus, maxime, consectetur sunt repellat iste dicta repudiandae quibusdam iure nobis a quis. Nulla error in, consequuntur at, excepturi asperiores velit eligendi labore pariatur recusandae, dicta natus! Sequi cupiditate nostrum porro amet! Eos laudantium hic vitae deleniti perferendis inventore molestiae vel repellendus obcaecati cum repudiandae eligendi facilis, at earum officia excepturi praesentium iure. Laborum praesentium fugiat tenetur quasi ab cumque dolores? Quis explicabo atque sed minus saepe laudantium est magnam facere sunt aliquid ab suscipit voluptatem dolorum, qui voluptatum amet libero illo illum. Eaque molestias cumque quidem adipisci ea hic enim, ipsum libero! Porro beatae cumque voluptatibus, facere saepe consectetur aut alias quidem ullam veritatis culpa ratione explicabo fugit dolorum, nesciunt sunt pariatur totam soluta. Ullam quae, ad aspernatur repellat pariatur fugit. Eligendi deleniti, vero doloribus rerum nesciunt harum nobis officiis autem sapiente neque, in esse dolor! Illum optio fugiat sapiente esse assumenda, dolorem deleniti quidem exercitationem beatae veniam alias officiis, soluta earum, officia atque repellendus eligendi et accusamus sit nulla dolores animi blanditiis iste! Vitae debitis dolorum excepturi laborum suscipit enim beatae, ipsa animi fugiat id ut incidunt libero rem voluptates aspernatur voluptatem eveniet sit nobis impedit similique minus. Aut maiores temporibus blanditiis pariatur amet numquam, ea minus dignissimos quidem, itaque ullam quos quis quia. Id, ratione?
+
+        <div class="box4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui sequi quia quisquam repudiandae officia distinctio inventore architecto. Ratione beatae recusandae eligendi autem labore modi, alias asperiores provident voluptas architecto nobis, id cupiditate.</div>
+        </div>
+        
+        <div class="box5">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat eos natus illum dicta dolores. Quod, deserunt nesciunt ratione maxime excepturi recusandae assumenda illo necessitatibus cum nam, minus cupiditate enim nobis, laborum quos vitae odit culpa ipsum soluta et ea nemo aspernatur. Maiores ipsam consectetur expedita repellat delectus, voluptatibus aspernatur sit. Consequatur exercitationem, in repudiandae consequuntur, fuga tempore iste quia quidem error illo, voluptatum enim aut vero rerum commodi ipsum eveniet! Quia, iure vitae repellendus ratione porro illo ullam itaque consectetur quas. Non voluptatibus accusamus officiis sunt facilis dicta tempora provident veritatis, expedita debitis dolore facere enim soluta dolores quasi voluptates, illum, iure impedit distinctio ad? Amet fuga asperiores iure temporibus magni, numquam tempore consectetur ullam in et eligendi aliquam corporis tempora officiis? Neque, sit commodi. Fuga ducimus blanditiis totam ratione, modi ipsam. Delectus odio incidunt facere ad excepturi eius consequuntur numquam ex labore laboriosam quis libero molestias modi est magnam repellendus enim voluptatum, distinctio rem eum provident deserunt totam. Neque sapiente fugiat, dolores sint tempore accusantium tenetur quisquam et. Magnam reiciendis perspiciatis tenetur, recusandae alias veritatis incidunt quis veniam a at culpa cupiditate aspernatur velit? Dolores praesentium nesciunt cupiditate dicta, itaque non ex ut hic. Sunt excepturi ducimus, consequatur numquam mollitia eum amet, quis doloremque repudiandae ab aliquid alias, maxime magnam voluptate ipsam itaque explicabo! Repellendus dolor, ipsa natus necessitatibus voluptate, esse totam, cumque consequuntur aspernatur magni deserunt quo nam distinctio beatae fugit eveniet. At doloremque consectetur ipsum officia sint esse quo fuga, qui nemo, totam voluptatem reiciendis. Quae, perferendis error consequatur enim iste praesentium obcaecati odio optio voluptatum delectus. Laborum quod possimus nobis quidem consequuntur nesciunt fugit, qui quae vel nam commodi ex, autem tenetur illo, non delectus voluptates! Accusantium reprehenderit, optio earum blanditiis ad natus, possimus ex eveniet similique commodi molestias! Voluptatum provident maiores odio accusantium, labore expedita.
+            <div class="box6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab id unde ea repellat iste dolorem repellendus, cumque nisi iusto, incidunt tempore? Repellat dolorem repellendus labore laborum aspernatur neque nemo! Voluptatibus autem eius commodi dicta illo, voluptas excepturi fugit voluptate consequatur.</div>
+        </div>
+</body>
+</html>

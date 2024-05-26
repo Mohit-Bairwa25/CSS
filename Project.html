@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortal X Kombat</title>
+    <link rel="stylesheet" href="ProStyle.css">
+
+    <style>
+        .playerb, .playerr {
+            display: none;
+        }
+    </style>
+    
+    <script>
+        window.onload = function() {
+            var playerb = Array.from(document.querySelectorAll('.tb .playerb'));
+            var playerr = Array.from(document.querySelectorAll('.tr .playerr'));
+            var indexb = 0;
+            var indexr = 0;
+    
+            // Function to hide all players
+            function hideAllPlayers(players) {
+                players.forEach(function(player) {
+                    player.style.display = 'none';
+                });
+            }
+    
+            // Function to display one player at a time
+            function displayPlayer(players, index) {
+                hideAllPlayers(players);
+                players[index].style.display = 'block';
+                return (index + 1) % players.length;
+            }
+    
+            // Call the function for the first time
+            displayPlayer(playerb, indexb);
+            displayPlayer(playerr, indexr);
+    
+            // Set the interval
+            setInterval(function() {
+                indexb = displayPlayer(playerb, indexb);
+            }, 4000);
+    
+            setInterval(function() {
+                indexr = displayPlayer(playerr, indexr);
+            }, 4000);
+        };
+    </script>
+</head>
+
+<body>
+    <header>  
+        <nav>
+            <div class="logo1"><img id="img1" src="Images/dragon.jpg" alt=""></div>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contacts.html">Contacts</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search Here">
+                <button class="btn">Find</button>
+            </div>
+            <div class="logo2"><img id="img2" src="Images/yang.png" alt=""></div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="con">
+            <h2 id="h21">Team Blue</h2>
+            <div class="tb">
+                <div class="playerb">
+                    <img class="B1" src="Blue/cassiecage.jpg" alt="Cassie Cage">
+                    <h3>Cassie Cage</h3>
+                    <p>Attack: 60</p>
+                    <p>Defense: 40</p>
+                    <p>Damage: 45</p>
+                    <p>Accuracy: 55%</p>
+                    <p>Heal Power: 30</p>
+                    <p>Stamina: 60</p>
+                </div>
+
+
+               <div class="playerb">
+                    <img class="B1" src="Blue/kenshi.jpg" alt="Kensi">
+                    <h3>Kenshi</h3>
+                    <p>Attack: 56</p>
+                    <p>Defense: 54</p>
+                    <p>Damage: 24</p>
+                    <p>Accuracy: 10%</p>
+                    <p>Heal Power: 30</p>
+                    <p>Stamina: 70</p>
+                </div> 
+
+                <div class="playerb">
+                    <img class="B1" src="Blue/kitana.jpg" alt="Kitana">
+                    <h3>Kitana</h3>
+                    <p>Attack: 86</p>
+                    <p>Defense: 74</p>
+                    <p>Damage: 74</p>
+                    <p>Accuracy: 50%</p>
+                    <p>Heal Power: 60</p>
+                    <p>Stamina: 70</p>
+                </div>
+
+                <div class="playerb">
+                    <img class="B1" src="Blue/kungjin.jpg" alt="Kung Jin">
+                    <h3>Kung Jin</h3>
+                    <p>Attack: 96</p>
+                    <p>Defense: 34</p>
+                    <p>Damage: 84</p>
+                    <p>Accuracy: 90%</p>
+                    <p>Heal Power: 40</p>
+                    <p>Stamina: 70</p>
+                </div>
+
+                <div class="playerb">
+                    <img class="B1" src="Blue/nightwolf.jpg" alt="Night Wolf">
+                    <h3>Night Wolf</h3>
+                    <p>Attack: 76</p>
+                    <p>Defense: 64</p>
+                    <p>Damage: 44</p>
+                    <p>Accuracy: 60%</p>
+                    <p>Heal Power: 40</p>
+                    <p>Stamina: 70</p>
+                </div>
+
+                <div class="playerb">
+                    <img class="B1" src="Blue/raiden.jpg" alt="Raiden">
+                    <h3>Raiden</h3>
+                    <p>Attack: 86</p>
+                    <p>Defense: 84</p>
+                    <p>Damage: 74</p>
+                    <p>Accuracy: 60%</p>
+                    <p>Heal Power: 50</p>
+                    <p>Stamina: 70</p>
+                </div>
+
+                <div class="playerb">
+                    <img class="B1" src="Blue/skarlet.jpg" alt="Skarlet">
+                    <h3>Skarlet</h3>
+                    <p>Attack: 56</p>
+                    <p>Defense: 54</p>
+                    <p>Damage: 54</p>
+                    <p>Accuracy: 60%</p>
+                    <p>Heal Power: 30</p>
+                    <p>Stamina: 70</p>
+                </div>
+
+                <div class="playerb">
+                    <img class="B1" src="Blue/subzero.jpg" alt="Sub-Zero">
+                    <h3>Sub-Zero</h3>
+                    <p>Attack: 56</p>
+                    <p>Defense: 54</p>
+                    <p>Damage: 24</p>
+                    <p>Accuracy: 10%</p>
+                    <p>Heal Power: 50</p>
+                    <p>Stamina: 70</p>
+                </div>
+            </div>
+
+
+                <h2 id="h22">Team Red</h2>
+            <div class="tr">
+                <div class="playerr">
+                    <img class="R1" src="Red/cyrax.jpg" alt="Cyrax">
+                    <h3>Cyraz</h3>
+                    <p>Attack: 77</p>
+                    <p>Defense: 55</p>
+                    <p>Damage: 65</p>
+                    <p>Accuracy: 75%</p>
+                    <p>Heal Power: 60</p>
+                    <p>Stamina: 68</p>
+                </div>
+            
+                <div class="playerr">
+                    <img class="R1" src="Red/erronblack.jpg" alt="Erron Black">
+                    <h3>Erron Black</h3>
+                    <p>Attack: 25</p>
+                    <p>Defense: 55</p>
+                    <p>Damage: 75</p>
+                    <p>Accuracy: 95%</p>
+                    <p>Heal Power: 60</p>
+                    <p>Stamina: 70</p>
+                </div>
+                
+                <div class="playerr">
+                    <img class="R1" src="Red/hanzohasahi.jpg" alt="Hanzo Hasahi">
+                    <h3>Hanzo Hasahi</h3>
+                    <p>Attack: 95</p>
+                    <p>Defense: 85</p>
+                    <p>Damage: 75</p>
+                    <p>Accuracy: 95%</p>
+                    <p>Heal Power: 60</p>
+                    <p>Stamina: 70</p>
+                </div>
+
+                <div class="playerr">
+                    <img class="R1" src="Red/Jade.jpg" alt="Jade">
+                    <h3>Jade</h3>
+                    <p>Attack: 75</p>
+                    <p>Defense: 65</p>
+                    <p>Damage: 85</p>
+                    <p>Accuracy: 75%</p>
+                    <p>Heal Power: 80</p>
+                    <p>Stamina: 80</p>
+                </div>
+
+                <div class="playerr">
+                    <img class="R1" src="Red/mileena.jpg" alt="Mileena">
+                    <h3>Mileena</h3>
+                    <p>Attack: 65</p>
+                    <p>Defense: 75</p>
+                    <p>Damage: 65</p>
+                    <p>Accuracy: 55%</p>
+                    <p>Heal Power: 70</p>
+                    <p>Stamina: 60</p>
+                </div>
+
+                <div class="playerr">
+                    <img class="R1" src="Red/reptile.jpg" alt="Reptile">
+                    <h3>Reptile</h3>
+                    <p>Attack: 45</p>
+                    <p>Defense: 55</p>
+                    <p>Damage: 65</p>
+                    <p>Accuracy: 55%</p>
+                    <p>Heal Power: 60</p>
+                    <p>Stamina: 50</p>
+                </div>
+
+                <div class="playerr">
+                    <img class="R1" src="Red/shaokahn.jpg" alt="Shao Kahn">
+                    <h3>Shao Kahn</h3>
+                    <p>Attack: 85</p>
+                    <p>Defense: 55</p>
+                    <p>Damage: 75</p>
+                    <p>Accuracy: 55%</p>
+                    <p>Heal Power: 60</p>
+                    <p>Stamina: 90</p>
+                </div>
+
+                <div class="playerr">
+                    <img class="R1" src="Red/sonyablade.jpg" alt="Sonya Blade">
+                    <h3>Sonya Blade</h3>
+                    <p>Attack: 65</p>
+                    <p>Defense: 55</p>
+                    <p>Damage: 65</p>
+                    <p>Accuracy: 85%</p>
+                    <p>Heal Power: 60</p>
+                    <p>Stamina: 70</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="text1">
+        <p>Copyright &copy; Undergound Mortal Kombat.com </p>
+    </footer>
+</body>
+<script>
+    const images = ['mortal1.jpg', 'mortal2.jpg', 'mortal3.jpg', 'mortal4.jpg'];
+    let currentIndex = 0;
+
+    const con = document.querySelector('.con');
+
+    function changeBackground() {
+        con.style.backgroundImage = `url(${images[currentIndex]})`;
+        currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    setInterval(changeBackground, 4000); // Change background every 4 seconds
+</script>
+</html>

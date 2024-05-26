@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox 1</title>
+    <style>
+      .room1 {
+        display: flex;
+        flex-direction: row; /*Ordering of Elements*/
+        flex-wrap: wrap-reverse; /*Determine Order of Wrapping*/
+        justify-content: center; /*Postion of Content (It is a Horizontal Axis Property)*/
+      }
+      .room2 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center; /*(It is a Vertical Axis Property) Justify Content will not work on .room2*/
+      }
+      .room3 {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap; /*Changes the order when you resize the window*/
+        justify-content: space-between; /*Equal Spaces between Content*/
+      }
+      .box1 {
+        height: 100px;
+        width: 100px;
+        background-color: aqua;
+        align-content: center;/*Helps to Align a Content inside a Element*/
+        order: 2;
+      }
+      .box2 {
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+        align-content: end;
+        order: 0;/*Helps in Defing Ordering Of Contents{-3,-2,-1,0,1,2,3} [Priority in Decresing order]*/
+      }
+      .box3 {
+        height: 100px;
+        width: 100px;
+        background-color: blueviolet;
+        order: -2;
+      }
+      .box4 {
+        height: 100px;
+        width: 100px;
+        background-color: brown;
+        order: 1;
+      }
+      .box5 {
+        height: 100px;
+        width: 100px;
+        background-color: cadetblue;
+        order: 3;
+      }
+      .box6 {
+        height: 100px;
+        width: 100px;
+        background-color: chartreuse;
+        order: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="room1">
+      <div class="box1">This is BOX 1</div>
+      <div class="box2">This is BOX 2</div>
+      <div class="box3">This is BOX 3</div>
+      <div class="box4">This is BOX 4</div>
+      <div class="box5">This is BOX 5</div>
+      <div class="box6">This is BOX 6</div>
+    </div>
+
+    <div class="room2">
+      <div class="box1">This is BOX 1</div>
+      <div class="box2">This is BOX 2</div>
+      <div class="box3">This is BOX 3</div>
+      <div class="box4">This is BOX 4</div>
+      <div class="box5">This is BOX 5</div>
+      <div class="box6">This is BOX 6</div>
+    </div>
+
+    <div class="room3">
+      <div class="box1">This is BOX 1</div>
+      <div class="box2">This is BOX 2</div>
+      <div class="box3">This is BOX 3</div>
+      <div class="box4">This is BOX 4</div>
+      <div class="box5">This is BOX 5</div>
+      <div class="box6">This is BOX 6</div>
+    </div>
+  </body>
+</html>

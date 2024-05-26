@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        .con{
+            background-color: red;
+            height: 45vh;
+        }
+        /*To Get a Better Understanding of Each Property Try to increse/decrease values in Browser*/
+        .item1{
+            margin: 20px;
+            border: 2px solid black;
+            transform: translate(120px, 50%);
+            /* Moves the element 120 pixels to the right from its original horizontal position.
+             Moves the element vertically by 50% of its own height.
+              */
+        }
+        .item2{
+            margin: 20px;
+            border: 2px solid black;
+            transform: rotate(0.45turn);
+            /*Allows you to rotate an element around its origin point*/
+        }
+        .item3{
+            margin: 20px;
+            border: 2px solid black;
+            transform: scale(0.5) translate(-100%, -100%);
+            /*scale() function resizes the element.
+              0.5 means the element's size will be reduced to 50% of its original size in both
+              the horizontal and vertical dimensions.
+              translate() function moves the element from its original position.
+              -100% for the horizontal value means the element will be moved 100% of its own width to the left.
+              -100% for the vertical value means the element will be moved 100% of its own height upwards.
+            */
+        }
+        .item4{
+            margin: 20px;
+            border: 2px solid black;
+            transform: scaleX(2);/*Scale the element horizontally (along the X-axis).*/
+            transform: scaleY(4);/*Scale the element horizontally (along the Y-axis).*/
+        }
+        .item5{
+            margin: 100px;
+            border: 2px solid black;
+            transform: scaleX(4);
+            transform: scaleY(4);
+            transform: skew(30deg, 5deg);
+            /*Tilt an element along the X-axis (horizontally) and the Y-axis (vertically).*/
+        }
+        .item6{
+            margin: 80px;
+            border: 2px solid black;
+            transform: scaleX(4);
+            transform: scaleY(4);
+            transform: rotateX(55deg);/*Rotates the element around its X-axis (horizontal axis)
+            Try to increse/decrease values in Browser*/
+        }
+        .item7{
+            margin: 80px;
+            border: 2px solid black;
+            transform: scaleX(4);
+            transform: scaleY(4);
+            transform: rotateY(55deg);/*Rotates the element around its Y-axis (vertical axis) by 55 degrees.*/
+        }
+        .item8{
+            margin: 80px;
+            border: 2px solid black;
+            transform: scaleX(4);
+            transform: scaleY(4);
+            transform: rotateZ(55deg);/*Rotates the element around its Z-axis (perpendicular axis) by 55*/
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="item1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item7">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item9">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+        <div class="item10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, possimus. Placeat, fugit.</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .con{
+            display: grid;
+            background-color: aquamarine;
+            grid-row-gap: 20px;/*Gap Between Row*/
+        }
+        .bon{
+            display: grid;
+            grid-template-columns: auto auto auto;/*3Times Auto Means 3 Column size will be automatically Selected*/
+            background-color: blueviolet;
+            grid-row-gap: 40px;/*Gap Between Row*/
+            grid-column-gap: 40px;/*Gap Between Column*/
+        }
+        .don{
+            display: grid;
+            grid-template-columns: 20px 40px 80px 160px;/*Size of Each Element*/
+            background-color: blue;
+            grid-gap: 20px 60px;/*Row & Column Gap*/
+            justify-content: center;/*Aligns Items in Center*/
+        }
+        .aon{
+            height: 90vh;
+            display: grid;
+            background-color: cadetblue;
+            grid-gap: 40px 40px;
+            grid-template-columns: 100px 200px 400px 800px;/*Determine Column Size of Item */
+            grid-template-rows: 200px 400px 800px 1600px;/*Determine Row Size of Item */
+        }
+        .eon{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+        .fon{
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+        .item{
+            background-color: bisque;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <div class="bon">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <div class="don">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <div class="aon">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <div class="eon">
+        <div class="item" style="grid-column: 1 / 3;">1</div>
+        <!-- It Will Expand the item 1 to third line -->
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+
+    <div class="fon">
+        <div class="item" style="grid-row: 1 / 3;">1</div>
+        <!-- It Will Expand the item 1 to third line -->
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>
